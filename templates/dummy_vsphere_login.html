@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VMWare SSO</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="login-container">
+        <img src="{{ url_for('static', filename='images/vmware-logo.png') }}" alt="VMWare Logo">
+        <div class="login-form-container">
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+
+                <div class="form-group checkbox">
+                    <input type="checkbox" id="windows-session-auth" name="windows-session-auth">
+                    <label for="windows-session-auth">Use Windows session authentication</label>
+                </div>
+
+                <input type="submit" value="Login" class="login-button">
+            </form>
+            <div class="divider"></div>
+            <div id="message" style="display: none;">
+                <p id="message-text">"You didn't say the magic word"</p>
+                <img id="animated-character" src="{{ url_for('static', filename='images/Mark-Foley.gif') }}" alt="Mark Foley" style="display: none;" />
+            </div>
+            <div class="info-box">
+                <img id="animated-character" src="{{ url_for('static', filename='images/Mark-Foley.gif') }}" alt="Mark Foley" style="display: none;" />
+                <p>VMware™ vCenter™ Single Sign-On™</p>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
